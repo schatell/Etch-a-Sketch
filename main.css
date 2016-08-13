@@ -1,0 +1,57 @@
+#header{
+	position: static;
+	height: 80px;
+	width: 100%;
+	background-color: #ff3333;
+	border-bottom: 3px solid #ff0000;
+}
+
+h1 {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top:15px;
+	font:45px arial;
+	color: white;
+	text-align: center;
+	border-radius: 15px 5px;
+	border-bottom: 3px solid white;
+}
+
+#option {
+	height: 80px;
+	position: relative;
+	float:left;
+	text-align: center;
+	padding-top: 5px;
+	width: 100%
+}
+.button{
+	background-color: #ff3333;
+	font:16px arial;
+	text-align: center;
+	color:white;
+	border:3px solid #ff3333;
+	width: 140px;
+	height: 40px;
+	padding:auto, auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 4px;
+	transition-duration: 0.4s;
+}
+.button:hover{
+	background-color: white;
+	color:black;
+}
+
+#main_container{
+	position: absolute;
+	top:160px;
+	left:15%;
+	right:15%;
+	min-width: 70%;
+	height: 80%;
+	background-color:grey;
+}
