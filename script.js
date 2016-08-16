@@ -21,27 +21,11 @@ $(document).ready(function(){
 				"class": 'square',
 				}).appendTo(playarea);		
 			}
+		};
 			$('.square').css('height',(760-(x+1))/x);
 			$('.square').css('width',(760-(x+1))/x);
-		};
 	});
 	drawcanvas();
-
-	$('#erase').click(function(){
-		trail = false;
-		erase = true;
-		$('#erase').css('background-color', 'grey');
-		$('#trail').css('background-color', '#ff3333');
-	});
-
-	$('#trail').click(function(){
-		trail = true;
-		erase = false;
-		$('#erase').css('background-color', '#ff3333');
-		$('#trail').css('background-color', 'grey');
-	});
-
-
 
 	var draw = (function(){
 		$('.square').on('mouseenter', function() {
@@ -52,6 +36,24 @@ $(document).ready(function(){
 				$(this).fadeTo('slow', 1);
 			}
 		});
+	});
+
+	$('#erase').click(function(){
+		trail = false;
+		erase = true;
+		drawcanvas();
+		draw();
+		$('#erase').css('background-color', 'grey');
+		$('#trail').css('background-color', '#ff3333');
+	});
+
+	$('#trail').click(function(){
+		trail = true;
+		erase = false;
+		drawcanvas();
+		draw();
+		$('#erase').css('background-color', '#ff3333');
+		$('#trail').css('background-color', 'grey');
 	});
 
 
